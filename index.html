@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-<link rel="canonical" href="https://mandaautoservice.github.io/M-Aautoservice-tireschicago/" />
-<meta name="google-site-verification" content="Q8PFXDibvQPdJBJTDPRhFuYAHltqhMHO2TWiuhDFAdI" />
+    <link rel="canonical" href="https://mandaautoservice.github.io/M-Aautoservice-tireschicago/" />
+    <meta name="google-site-verification" content="Q8PFXDibvQPdJBJTDPRhFuYAHltqhMHO2TWiuhDFAdI" />
 
-   <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
@@ -86,12 +86,14 @@
 
 
 
-   <title>M & A Auto Service | Tires, Brakes & Auto Repair · Niles, IL</title>
-<meta name="description" content="Niles' top-rated auto shop. Shop 50+ tire brands (Michelin, Goodyear, Budget), book oil changes, brake repair, and diagnostics. ASE Certified mechanics. Get a free quote!" />
-<meta name="keywords" content="tires Niles IL, tire shop Chicago, buy tires Des Plaines, wheel alignment, oil change Niles, mechanic near me, Michelin tires Chicago" />
+    <title>M & A Auto Service | Tires, Brakes & Auto Repair · Niles, IL</title>
+    <meta name="description"
+        content="Niles' top-rated auto shop. Shop 50+ tire brands (Michelin, Goodyear, Budget), book oil changes, brake repair, and diagnostics. ASE Certified mechanics. Get a free quote!" />
+    <meta name="keywords"
+        content="tires Niles IL, tire shop Chicago, buy tires Des Plaines, wheel alignment, oil change Niles, mechanic near me, Michelin tires Chicago" />
 
 
-    
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -4161,25 +4163,267 @@
             color: var(--white);
         }
 
+        /* ── VEHICLE EXCHANGE HUB ── */
+        #vehicle-exchange {
+            background: var(--off-white);
+            position: relative;
+        }
+
+        .exchange-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+            align-items: start;
+        }
+
+        .exchange-timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-left: 20px;
+            border-left: 2px solid rgba(201, 168, 76, 0.3);
+        }
+
+        .exchange-step {
+            position: relative;
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .exchange-step::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 2.5rem;
+            width: 16px;
+            height: 16px;
+            background: var(--off-white);
+            border: 3px solid var(--gold);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+
+        .exchange-step.active {
+            background: var(--white);
+            border-color: rgba(201, 168, 76, 0.5);
+            transform: translateX(10px);
+            box-shadow: 0 15px 35px rgba(10, 22, 40, 0.08);
+        }
+
+        .exchange-step.active::before {
+            background: var(--gold);
+            box-shadow: 0 0 15px rgba(201, 168, 76, 0.6);
+        }
+
+        .exchange-step-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: rgba(201, 168, 76, 0.08);
+            position: absolute;
+            top: 0.5rem;
+            right: 1.5rem;
+            font-weight: 900;
+            line-height: 1;
+            transition: all 0.4s;
+            pointer-events: none;
+        }
+
+        .exchange-step.active .exchange-step-num {
+            color: rgba(201, 168, 76, 0.2);
+            transform: scale(1.1);
+        }
+
+        .exchange-step h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .exchange-step.active h4 {
+            color: var(--gold-dark);
+        }
+
+        .exchange-step p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .exchange-step.active p {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .exchange-form-wrap {
+            background: linear-gradient(145deg, var(--navy), var(--navy-mid));
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-navy);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .exchange-form-wrap::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .exchange-form-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .exchange-form-sub {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .exchange-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .exchange-input-group {
+            position: relative;
+        }
+
+        .exchange-input-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .exchange-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.2rem;
+            border-radius: 8px;
+            color: var(--white);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+
+        .exchange-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+        }
+
+        .exchange-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .exchange-toggle {
+            display: flex;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-pill);
+            margin-bottom: 2rem;
+            position: relative;
+            padding: 0.3rem;
+        }
+
+        .exchange-toggle-btn {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: var(--radius-pill);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .exchange-toggle-btn.active {
+            color: var(--navy);
+        }
+
+        .exchange-toggle-slider {
+            position: absolute;
+            top: 0.3rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
+            width: calc(50% - 0.3rem);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            border-radius: var(--radius-pill);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+        }
+
+        .exchange-form-mode-buy .exchange-toggle-slider {
+            transform: translateX(100%);
+        }
+
+        .hidden-field {
+            display: none !important;
+        }
+
+        .exchange-submit {
+            width: 100%;
+            margin-top: 1.5rem;
+            justify-content: center;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        @media(max-width: 992px) {
+            .exchange-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        @media(max-width: 768px) {
+            .exchange-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .exchange-form-wrap {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
         @media(max-width: 768px) {
             .tyre-seo-hub {
                 padding: 3rem 1.5rem;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     </style>
 </head>
 
@@ -5291,16 +5535,21 @@
     </section>
 
 
-<div class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
-  <h3>Tire Brands We Carry in Niles, IL</h3>
-  <p>M & A Auto Service is your premier destination for tire sales, mounting, and balancing in the Chicago northwest suburbs. We stock over 50 tire brands including:</p>
-  <ul>
-    <li><strong>Premium Tires:</strong> Michelin, Pirelli, Continental, Bridgestone, Goodyear, Dunlop.</li>
-    <li><strong>Performance & Touring:</strong> Yokohama, Hankook, Toyo, Falken, BF Goodrich, Firestone, Cooper.</li>
-    <li><strong>Budget & Economy Tires:</strong> Primewell, Ironman, Laufenn, Kenda, Nankang, Westlake, Sailun.</li>
-  </ul>
-  <p>Whether you need all-season tires, winter tires for Chicago snow, or high-performance rubber, we provide road-force balancing, TPMS resets, and free disposal.</p>
-</div>
+    <div class="sr-only"
+        style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+        <h3>Tire Brands We Carry in Niles, IL</h3>
+        <p>M & A Auto Service is your premier destination for tire sales, mounting, and balancing in the Chicago
+            northwest suburbs. We stock over 50 tire brands including:</p>
+        <ul>
+            <li><strong>Premium Tires:</strong> Michelin, Pirelli, Continental, Bridgestone, Goodyear, Dunlop.</li>
+            <li><strong>Performance & Touring:</strong> Yokohama, Hankook, Toyo, Falken, BF Goodrich, Firestone, Cooper.
+            </li>
+            <li><strong>Budget & Economy Tires:</strong> Primewell, Ironman, Laufenn, Kenda, Nankang, Westlake, Sailun.
+            </li>
+        </ul>
+        <p>Whether you need all-season tires, winter tires for Chicago snow, or high-performance rubber, we provide
+            road-force balancing, TPMS resets, and free disposal.</p>
+    </div>
 
 
 
@@ -5323,7 +5572,99 @@
 
 
 
-    
+
+
+    <!-- VEHICLE EXCHANGE HUB -->
+    <section id="vehicle-exchange">
+        <span class="section-tag reveal">Premium Exchange</span>
+        <h2 class="section-title reveal">Vehicle Acquisition <span>& Trade-in Hub</span></h2>
+        <div class="section-line reveal"></div>
+        <p class="section-sub reveal">Unlock the true market equity of your vehicle. Whether you're considering a seamless transition into a new model or an outright acquisition by our team, our experts provide a bespoke, data-driven evaluation without any obligation.</p>
+
+        <div class="exchange-hero reveal" style="margin-top:3.5rem; border-radius: var(--radius-lg); overflow: hidden; position: relative; height: 350px; box-shadow: 0 20px 40px rgba(10, 22, 40, 0.15);">
+            <img src="https://images.unsplash.com/photo-1618843479619-f3d0d81e4d10?auto=format&fit=crop&w=1920&q=80" alt="Premium Luxury Vehicle Assessment" style="width:100%; height:100%; object-fit:cover; transition: transform 6s ease;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(90deg, var(--navy) 0%, rgba(10, 22, 40, 0.4) 50%, transparent 100%); pointer-events: none;"></div>
+            <div style="position: absolute; bottom: 3rem; left: 3rem; color: var(--white); max-width: 600px;">
+                <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.3); padding:0.4rem 1rem; border-radius:50px; margin-bottom:1rem;">
+                    <i class="fas fa-gem" style="color:var(--gold); font-size:0.8rem;"></i>
+                    <span style="color:var(--gold); font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;">Uncompromising Standards</span>
+                </div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.8rem; line-height:1.2;">Bespoke Evaluation for<br>Exceptional Vehicles.</h3>
+                <p style="color: rgba(255,255,255,0.75); font-size: 1.1rem; font-weight:300;">We meticulously appraise every detail to ensure your asset is valued with the prestige it deserves.</p>
+            </div>
+        </div>
+
+        <div class="exchange-grid">
+            <!-- Timeline (Left) -->
+            <div class="exchange-timeline reveal-left">
+                <div class="exchange-step active" onclick="activateExchangeStep(this)">
+                    <div class="exchange-step-num">01</div>
+                    <h4>Precision Assessment</h4>
+                    <p>We analyze your vehicle’s condition, maintenance history, and market rarity using advanced automotive metrics to establish its foundational equity.</p>
+                </div>
+                <div class="exchange-step" onclick="activateExchangeStep(this)">
+                    <div class="exchange-step-num">02</div>
+                    <h4>Equity Evaluation</h4>
+                    <p>Our valuation experts cross-reference live market trends to determine the true potential of your vehicle, ensuring you receive maximum value for your asset.</p>
+                </div>
+                <div class="exchange-step" onclick="activateExchangeStep(this)">
+                    <div class="exchange-step-num">03</div>
+                    <h4>Seamless Transition</h4>
+                    <p>Experience a white-glove process. Transition effortlessly into a newer model from our network or accept a direct acquisition offer with immediate processing.</p>
+                </div>
+            </div>
+
+            <!-- Form (Right) -->
+            <div class="exchange-form-wrap reveal-right" id="exchange-wrap">
+                <h3 class="exchange-form-title" id="ex-title">Request Market Valuation</h3>
+                <p class="exchange-form-sub" id="ex-sub">Enter your vehicle details for an exclusive assessment.</p>
+                
+                <div class="exchange-toggle" onclick="toggleExchangeMode()">
+                    <div class="exchange-toggle-slider"></div>
+                    <div class="exchange-toggle-btn active" id="btn-sell">Sell / Trade-In</div>
+                    <div class="exchange-toggle-btn" id="btn-buy">Acquire / Buy</div>
+                </div>
+
+                <form id="exchange-form" class="exchange-form-grid" onsubmit="event.preventDefault(); submitExchangeForm();">
+                    <div class="exchange-input-group">
+                        <input type="text" id="ex-make" class="exchange-input" placeholder="Make (e.g., BMW)" required>
+                    </div>
+                    <div class="exchange-input-group">
+                        <input type="text" id="ex-model" class="exchange-input" placeholder="Model (e.g., X5)" required>
+                    </div>
+                    <div class="exchange-input-group" id="group-year">
+                        <input type="text" id="ex-year" class="exchange-input" placeholder="Year" required>
+                    </div>
+                    <div class="exchange-input-group" id="group-mileage">
+                        <input type="text" id="ex-mileage" class="exchange-input" placeholder="Mileage (e.g., 45,000)" required>
+                    </div>
+                    <div class="exchange-input-group full" id="group-vin">
+                        <input type="text" id="ex-vin" class="exchange-input" placeholder="VIN Number (Optional for enhanced precision)">
+                    </div>
+                    <div class="exchange-input-group full" id="group-ex-image" style="margin-top:0.5rem; margin-bottom:0.5rem;">
+                        <div class="file-upload-wrapper" id="ex-upload-wrapper" style="border: 1px dashed rgba(201,168,76,0.5); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                            <input type="file" id="ex-image" class="file-upload-input" accept="image/*" capture="environment" onchange="handleExchangeImageUpload(event)" />
+                            <div class="file-upload-trigger" style="color:rgba(255,255,255,0.7); padding: 1.5rem; text-align:center; font-family:'Rajdhani', sans-serif;">
+                                <i class="fas fa-camera" style="color:var(--gold); margin-right:0.5rem; font-size:1.2rem;"></i> Upload or Snap Car Photo (Optional)
+                            </div>
+                        </div>
+                        <div class="image-preview-container" id="ex-preview-container" style="display:none; position:relative; margin-top:0.5rem;">
+                            <button type="button" class="remove-image-btn" onclick="removeExchangeImage()" style="position:absolute; top:10px; right:10px; background:var(--gold); border:none; border-radius:50%; width:30px; height:30px; cursor:pointer; z-index:10;"><i class="fas fa-times" style="color:var(--navy);"></i></button>
+                            <img id="ex-image-preview" src="" alt="Vehicle Preview" style="width:100%; border-radius:8px; border:2px solid var(--gold);" />
+                        </div>
+                    </div>
+                    <div class="exchange-input-group full">
+                        <input type="text" id="ex-phone" class="exchange-input" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="exchange-input-group full">
+                        <button type="submit" class="btn-gold exchange-submit" id="ex-submit-btn">
+                            <i class="fas fa-chart-line" id="ex-submit-icon"></i> <span id="ex-submit-text">Initiate Assessment</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- OIL CHANGE TOOL -->
     <section id="oil-tool">
@@ -6353,6 +6694,12 @@
             setTimeout(() => { document.getElementById('preloader').classList.add('hide'); }, 2400);
         });
 
+        // Fallback: if 'load' event doesn't fire due to slow network or broken images, hide preloader after 5 seconds anyway.
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) preloader.classList.add('hide');
+        }, 5000);
+
         // ════════════════════════════════════════════
         // CURSOR (desktop only)
         // ════════════════════════════════════════════
@@ -7369,10 +7716,164 @@
 
 
 
-        
 
 
-        
+
+
+        // ════════════════════════════════════════════
+        // VEHICLE EXCHANGE HUB
+        // ════════════════════════════════════════════
+        function activateExchangeStep(el) {
+            document.querySelectorAll('.exchange-step').forEach(step => step.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        let exchangeMode = 'sell';
+        let exchangeUploadedImageBase64 = null;
+
+        function handleExchangeImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    exchangeUploadedImageBase64 = e.target.result;
+                    document.getElementById('ex-image-preview').src = exchangeUploadedImageBase64;
+                    document.getElementById('ex-preview-container').style.display = 'block';
+                    document.getElementById('ex-upload-wrapper').style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeExchangeImage() {
+            exchangeUploadedImageBase64 = null;
+            document.getElementById('ex-image').value = '';
+            document.getElementById('ex-preview-container').style.display = 'none';
+            document.getElementById('ex-upload-wrapper').style.display = 'block';
+        }
+
+        function toggleExchangeMode() {
+            const wrap = document.getElementById('exchange-wrap');
+            const btnSell = document.getElementById('btn-sell');
+            const btnBuy = document.getElementById('btn-buy');
+            
+            const title = document.getElementById('ex-title');
+            const sub = document.getElementById('ex-sub');
+            const submitText = document.getElementById('ex-submit-text');
+            const submitIcon = document.getElementById('ex-submit-icon');
+            
+            const groupVin = document.getElementById('group-vin');
+            const groupExImage = document.getElementById('group-ex-image');
+            
+            if (exchangeMode === 'sell') {
+                // Switch to Buy
+                exchangeMode = 'buy';
+                wrap.classList.add('exchange-form-mode-buy');
+                btnSell.classList.remove('active');
+                btnBuy.classList.add('active');
+                
+                title.textContent = 'Acquire Your Next Vehicle';
+                sub.textContent = 'Specify your desired vehicle and we will locate the perfect match.';
+                
+                document.getElementById('ex-make').placeholder = 'Desired Make (e.g., Porsche)';
+                document.getElementById('ex-model').placeholder = 'Desired Model (e.g., 911)';
+                document.getElementById('ex-year').placeholder = 'Preferred Year Range (e.g., 2020-2023)';
+                document.getElementById('ex-mileage').placeholder = 'Max Mileage Preference';
+                
+                groupVin.classList.add('hidden-field');
+                groupExImage.classList.add('hidden-field');
+                document.getElementById('ex-vin').removeAttribute('required');
+                
+                submitText.textContent = 'Request Acquisition Details';
+                submitIcon.className = 'fas fa-search';
+            } else {
+                // Switch to Sell
+                exchangeMode = 'sell';
+                wrap.classList.remove('exchange-form-mode-buy');
+                btnBuy.classList.remove('active');
+                btnSell.classList.add('active');
+                
+                title.textContent = 'Request Market Valuation';
+                sub.textContent = 'Enter your vehicle details for an exclusive assessment.';
+                
+                document.getElementById('ex-make').placeholder = 'Make (e.g., BMW)';
+                document.getElementById('ex-model').placeholder = 'Model (e.g., X5)';
+                document.getElementById('ex-year').placeholder = 'Year';
+                document.getElementById('ex-mileage').placeholder = 'Mileage (e.g., 45,000)';
+                
+                groupVin.classList.remove('hidden-field');
+                groupExImage.classList.remove('hidden-field');
+                
+                submitText.textContent = 'Initiate Assessment';
+                submitIcon.className = 'fas fa-chart-line';
+            }
+        }
+
+        function submitExchangeForm() {
+            const make = document.getElementById('ex-make').value.trim();
+            const model = document.getElementById('ex-model').value.trim();
+            const year = document.getElementById('ex-year').value.trim();
+            const mileage = document.getElementById('ex-mileage').value.trim();
+            const vin = document.getElementById('ex-vin').value.trim();
+            const phone = document.getElementById('ex-phone').value.trim();
+
+            if (!make || !model || !year || !mileage || !phone) {
+                showToast('Please complete all required fields.');
+                return;
+            }
+
+            const isBuy = exchangeMode === 'buy';
+
+            const formData = {
+                name: isBuy ? 'Acquisition Client' : 'Exchange Client',
+                phone: phone,
+                vehicle: isBuy ? `Desired: ${year} ${make} ${model}` : `${year} ${make} ${model}`,
+                service: isBuy ? 'Vehicle Acquisition Request' : 'Vehicle Valuation Request',
+                notes: isBuy 
+                    ? `Max Mileage: ${mileage} | Sourcing premium match.` 
+                    : `Mileage: ${mileage} | VIN: ${vin || 'Not Provided'} | Initiating market equity evaluation.`
+            };
+
+            try {
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    keepalive: true,
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(formData)
+                });
+            } catch (err) {
+                console.error('Exchange request failed:', err);
+            }
+
+            // Generate PDF with or without image
+            if (!isBuy && exchangeUploadedImageBase64) {
+                generatePremiumPDFWithImage(formData, exchangeUploadedImageBase64);
+            } else {
+                generatePremiumPDF(formData);
+            }
+
+            showToast(isBuy ? 'Acquisition request initiated. We will find your match.' : 'Valuation dossier initiated. Our experts will contact you shortly.');
+            
+            // Redirect to prefilled SMS
+            setTimeout(() => {
+                let smsBody = isBuy 
+                    ? `Hi M & A Auto Service, I am interested in acquiring a ${year} ${make} ${model}. My name is Acquisition Client.`
+                    : `Hi M & A Auto Service, I just submitted a valuation request for my ${year} ${make} ${model}. My name is Exchange Client.`;
+                
+                if (!isBuy && exchangeUploadedImageBase64) {
+                    smsBody += `\n*I have uploaded an image of my vehicle (Check the PDF dossier).`;
+                }
+                
+                const encodedBody = encodeURIComponent(smsBody);
+                window.location.href = `sms:+18479662886?body=${encodedBody}`;
+            }, 1500);
+
+            // Cleanup
+            document.getElementById('exchange-form').reset();
+            if(!isBuy) removeExchangeImage();
+        }
+
     </script>
 </body>
 
