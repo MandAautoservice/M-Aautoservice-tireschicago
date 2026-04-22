@@ -5,13 +5,67 @@
 <link rel="canonical" href="https://mandaautoservice.github.io/M-Aautoservice-tireschicago/" />
 <meta name="google-site-verification" content="Q8PFXDibvQPdJBJTDPRhFuYAHltqhMHO2TWiuhDFAdI" />
 
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
+  "@type": "AutoRepair",
   "name": "M & A Auto Service",
   "alternateName": "M&A Auto Service",
-  "url": "https://mandaautoservice.github.io/M-Aautoservice-tireschicago/"
+  "image": "https://mandaautoservice.github.io/M-Aautoservice-tireschicago/web-app-manifest-512x512.jpg",
+  "@id": "https://mandaautoservice.github.io/M-Aautoservice-tireschicago/",
+  "url": "https://mandaautoservice.github.io/M-Aautoservice-tireschicago/",
+  "telephone": "+18479662886",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8795 N Milwaukee Ave",
+    "addressLocality": "Niles",
+    "addressRegion": "IL",
+    "postalCode": "60714",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.0357, 
+    "longitude": -87.8189 
+  },
+  "areaServed": ["Niles", "Chicago", "Des Plaines", "Skokie", "Morton Grove", "Park Ridge"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tire Sales and Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Premium Tire Fitting",
+          "description": "Mounting and balancing for premium brands like Michelin, Pirelli, Continental, and Goodyear."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Budget and Economy Tires",
+          "description": "Affordable new tires from trusted brands like Hankook, Nexen, and Westlake."
+        }
+      }
+    ]
+  }
 }
 </script>
 
@@ -29,7 +83,15 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <title>M & A Auto Service | Premium Auto Care · Niles, IL</title>
+
+
+
+   <title>M & A Auto Service | Tires, Brakes & Auto Repair · Niles, IL</title>
+<meta name="description" content="Niles' top-rated auto shop. Shop 50+ tire brands (Michelin, Goodyear, Budget), book oil changes, brake repair, and diagnostics. ASE Certified mechanics. Get a free quote!" />
+<meta name="keywords" content="tires Niles IL, tire shop Chicago, buy tires Des Plaines, wheel alignment, oil change Niles, mechanic near me, Michelin tires Chicago" />
+
+
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -4104,6 +4166,262 @@
                 padding: 3rem 1.5rem;
             }
         }
+
+
+
+
+/* ══ WHITE-GLOVE CONCIERGE HUB (SELL & ACQUIRE) ══ */
+#concierge {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.concierge-wrap {
+    background: linear-gradient(135deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .01));
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(201, 168, 76, .25);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 40px 100px rgba(10, 22, 40, .8), inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+
+.concierge-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-bottom: 1rem;
+}
+
+.c-tab {
+    background: transparent;
+    color: rgba(255, 255, 255, .4);
+    border: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .4s;
+    position: relative;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.c-tab:hover {
+    color: rgba(201, 168, 76, .7);
+}
+
+.c-tab.active {
+    color: var(--gold);
+}
+
+.c-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+    transition: width .4s cubic-bezier(.25, .8, .25, 1);
+    border-radius: 3px 3px 0 0;
+}
+
+.c-tab.active::after {
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(201, 168, 76, .4);
+}
+
+.c-panel {
+    display: none;
+    animation: fadeIn .6s ease;
+}
+
+.c-panel.active {
+    display: block;
+}
+
+.c-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.c-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.c-info p {
+    color: rgba(255, 255, 255, .6);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.c-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.c-features li {
+    color: rgba(255, 255, 255, .8);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .95rem;
+}
+
+.c-features i {
+    color: var(--gold);
+    background: rgba(201, 168, 76, .1);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: .8rem;
+}
+
+/* Dark Input Fields */
+.c-input-group {
+    margin-bottom: 1.5rem;
+}
+
+.c-input-group label {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gold-light);
+    font-size: .72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: .8rem;
+}
+
+.c-input {
+    width: 100%;
+    background: rgba(10, 22, 40, .6);
+    border: 1.5px solid rgba(201, 168, 76, .2);
+    color: var(--white);
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.c-input:focus {
+    border-color: var(--gold);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, .15);
+}
+
+.c-input::placeholder {
+    color: rgba(255, 255, 255, .3);
+}
+
+/* Custom Range Slider */
+.c-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 3px;
+    outline: none;
+    margin-top: .5rem;
+}
+
+.c-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--gold);
+    cursor: pointer;
+    border: 3px solid var(--navy);
+    box-shadow: 0 0 15px rgba(201, 168, 76, .6);
+    transition: .2s;
+}
+
+.c-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Valuation Result Box */
+.val-result-box {
+    background: linear-gradient(135deg, rgba(201, 168, 76, .1), rgba(201, 168, 76, .02));
+    border-left: 3px solid var(--gold);
+    padding: 1.5rem 2rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-top: 2rem;
+    display: none;
+}
+
+.val-result-box.show {
+    display: block;
+    animation: fadeIn .5s ease;
+}
+
+.val-label {
+    font-size: .7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .6);
+    font-weight: 700;
+}
+
+.val-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--white);
+    margin: .5rem 0;
+    line-height: 1;
+}
+
+.val-price span {
+    color: var(--gold);
+}
+
+.val-disclaimer {
+    font-size: .8rem;
+    color: rgba(255, 255, 255, .4);
+    font-style: italic;
+}
+
+@media(max-width: 900px) {
+    .c-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .concierge-wrap { padding: 2rem 1.5rem; }
+    .concierge-tabs { flex-direction: column; gap: 1rem; border-bottom: none; }
+    .c-tab::after { display: none; }
+    .c-tab.active { background: rgba(201, 168, 76, .1); padding: 1rem; border-radius: var(--radius); }
+}
+
+
+
+
+
+
+
+
+
+
+
+        
     </style>
 </head>
 
@@ -4263,7 +4581,7 @@
             <div class="stat-cell reveal">
                 <span class="stat-cell-icon"><i class="fas fa-circle-notch"></i></span>
                 <span class="stat-cell-number" data-target="50" data-suffix="+">0+</span>
-                <div class="stat-cell-label">Tyre Brands</div>
+                <div class="stat-cell-label">Tire Brands</div>
                 <div class="stat-cell-sub">Premium &amp; Budget</div>
                 <div class="stat-cell-divider-v"></div>
             </div>
@@ -4297,7 +4615,7 @@
     <!-- ══ =tyre part ══ -->
 
     <section id="tyre-tool">
-        <span class="section-tag reveal">Tyre Centre <i class="fas fa-star"
+        <span class="section-tag reveal">Tire Centre <i class="fas fa-star"
                 style="color:var(--gold);font-size:.8rem;margin-left:.5rem"></i></span>
         <h2 class="section-title reveal">Find Your Perfect <span>Tyres</span></h2>
         <div class="section-line reveal"></div>
@@ -4308,7 +4626,7 @@
         <div class="tool-wrap reveal">
             <div class="tool-header">
                 <div class="tool-header-text">
-                    <h3><i class="fas fa-crown" style="color:var(--gold);margin-right:.5rem"></i>Tyre Configurator</h3>
+                    <h3><i class="fas fa-crown" style="color:var(--gold);margin-right:.5rem"></i>Tire Configurator</h3>
                     <p>50 brands available · Premium &amp; Budget · Fitting &amp; Balancing Included</p>
                 </div>
                 <div class="tool-tabs">
@@ -4329,7 +4647,7 @@
 
                     <div class="config-grid">
                         <div class="config-group">
-                            <label>Tyre Width (mm)</label>
+                            <label>Tire Width (mm)</label>
                             <select class="config-select" id="p-width" onchange="calcTyreSize()">
                                 <option value="">Select Width</option>
                                 <option>155</option>
@@ -4680,7 +4998,7 @@
 
                     <div class="tyre-result" id="premium-result">
                         <div>
-                            <div class="result-label">Tyre Size</div>
+                            <div class="result-label">Tire Size</div>
                             <div class="result-value" id="premium-size">—</div>
                             <div style="margin-top:1rem">
                                 <div class="result-label">Brand</div>
@@ -4694,7 +5012,7 @@
                         <div style="text-align:right">
                             <div class="result-note" style="margin-bottom:1rem">Professional fitting & balancing
                                 included · OEM-grade quality guaranteed</div>
-                            <button class="btn-gold" onclick="openQuoteModal('Tyre')">Request a Quote</button>
+                            <button class="btn-gold" onclick="openQuoteModal('Tire')">Request a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -4708,7 +5026,7 @@
 
                     <div class="config-grid">
                         <div class="config-group">
-                            <label>Tyre Width (mm)</label>
+                            <label>Tire Width (mm)</label>
                             <select class="config-select" id="b-width" onchange="calcBudgetSize()">
                                 <option value="">Select Width</option>
                                 <option>155</option>
@@ -5014,7 +5332,7 @@
 
                     <div class="tyre-result" id="budget-result">
                         <div>
-                            <div class="result-label">Tyre Size</div>
+                            <div class="result-label">Tire Size</div>
                             <div class="result-value" id="budget-size">—</div>
                             <div style="margin-top:1rem">
                                 <div class="result-label">Brand</div>
@@ -5024,7 +5342,7 @@
                         <div style="text-align:right">
                             <div class="result-note" style="color:#10B981;margin-bottom:1rem">Budget-friendly — fitting
                                 included</div>
-                            <button class="btn-gold" onclick="openQuoteModal('Budget Tyre')">Request a Quote</button>
+                            <button class="btn-gold" onclick="openQuoteModal('Budget Tire')">Request a Quote</button>
                         </div>
                     </div>
                 </div>
@@ -5039,7 +5357,7 @@
                     </p>
                     <div class="config-grid">
                         <div class="config-group">
-                            <label>Tyre Width (mm)</label>
+                            <label>Tire Width (mm)</label>
                             <select class="config-select" id="r-width" onchange="calcRefurbSize()">
                                 <option value="">Select Width</option>
                                 <option>155</option>
@@ -5110,7 +5428,7 @@
                     </div>
                     <div class="tyre-result" id="refurb-result">
                         <div>
-                            <div class="result-label">Tyre Size</div>
+                            <div class="result-label">Tire Size</div>
                             <div class="result-value" id="refurb-size">—</div>
                             <div style="margin-top:1rem">
                                 <div class="result-label">Visual Grade</div>
@@ -5120,7 +5438,7 @@
                         <div style="text-align:right">
                             <div class="result-note" style="margin-bottom:1rem">Fully inspected · Safety guaranteed
                             </div>
-                            <button class="btn-gold" onclick="openQuoteModal('Refurbished Tyre')">Request a
+                            <button class="btn-gold" onclick="openQuoteModal('Refurbished Tire')">Request a
                                 Quote</button>
                         </div>
                     </div>
@@ -5144,11 +5462,11 @@
 
                 <div class="hub-card">
                     <div class="hub-card-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Is My Tyre Safe?</h4>
+                    <h4>Is My Tire Safe?</h4>
                     <p>Combine DOT age, tread depth, and pressure into one quick check.</p>
 
                     <div class="hub-interactive">
-                        <label>Check Tyre Age (Find 4-digit DOT code on sidewall)</label>
+                        <label>Check Tire Age (Find 4-digit DOT code on sidewall)</label>
                         <div class="dot-input-group">
                             <input type="text" id="dot-input" placeholder="e.g. 4221" maxlength="4" />
                             <button onclick="checkTyreAge()" class="btn-hub">Check</button>
@@ -5215,11 +5533,137 @@
     </section>
 
 
+<div class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+  <h3>Tire Brands We Carry in Niles, IL</h3>
+  <p>M & A Auto Service is your premier destination for tire sales, mounting, and balancing in the Chicago northwest suburbs. We stock over 50 tire brands including:</p>
+  <ul>
+    <li><strong>Premium Tires:</strong> Michelin, Pirelli, Continental, Bridgestone, Goodyear, Dunlop.</li>
+    <li><strong>Performance & Touring:</strong> Yokohama, Hankook, Toyo, Falken, BF Goodrich, Firestone, Cooper.</li>
+    <li><strong>Budget & Economy Tires:</strong> Primewell, Ironman, Laufenn, Kenda, Nankang, Westlake, Sailun.</li>
+  </ul>
+  <p>Whether you need all-season tires, winter tires for Chicago snow, or high-performance rubber, we provide road-force balancing, TPMS resets, and free disposal.</p>
+</div>
 
 
 
 
 
+<section id="concierge">
+        <div class="hub-glow" style="top: -10%; left: 20%; background: radial-gradient(circle, rgba(201, 168, 76, .06) 0%, transparent 60%);"></div>
+        <div class="services-noise"></div>
+
+        <span class="section-tag reveal" style="color: var(--gold-light);">Automotive Concierge <i class="fas fa-key" style="margin-left:.5rem"></i></span>
+        <h2 class="section-title reveal" style="color: var(--white);">Vehicle <span class="gold">Acquisition & Consignment</span></h2>
+        <div class="section-line reveal"></div>
+        <p class="section-sub reveal" style="color: rgba(255, 255, 255, .55); margin-bottom: 3.5rem; max-width: 650px;">
+            A white-glove approach to trading vehicles. Whether you are parting ways with a cherished asset or hunting for an exact specification, our dealer network ensures a seamless, discreet, and highly lucrative transaction.
+        </p>
+
+        <div class="concierge-wrap reveal">
+            <div class="concierge-tabs">
+                <button class="c-tab active" onclick="switchConciergeTab('sell', this)"><i class="fas fa-handshake"></i> Consign & Trade-In</button>
+                <button class="c-tab" onclick="switchConciergeTab('buy', this)"><i class="fas fa-compass"></i> Bespoke Sourcing</button>
+            </div>
+
+            <div class="c-panel active" id="c-tab-sell">
+                <div class="c-grid">
+                    <div class="c-info">
+                        <h4>Maximize Your Return. Zero Hassle.</h4>
+                        <p>Skip the lowball dealer offers and private market headaches. We inspect, detail, stage, and leverage our exclusive network to get you top dollar for your current vehicle.</p>
+                        <ul class="c-features">
+                            <li><i class="fas fa-camera-retro"></i> Professional staging & high-res photography</li>
+                            <li><i class="fas fa-search-dollar"></i> Pre-sale mechanical certification to boost value</li>
+                            <li><i class="fas fa-shield-alt"></i> We handle all test drives, negotiations, and DMV paperwork</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="c-form">
+                        <div class="c-input-group">
+                            <label>Vehicle Year, Make & Model</label>
+                            <input type="text" class="c-input" id="v-model" placeholder="e.g. 2021 Porsche Macan S" oninput="runValuation()">
+                        </div>
+                        <div class="c-input-group">
+                            <label><span>Current Mileage</span> <span id="v-mileage-val">40,000 mi</span></label>
+                            <input type="range" class="c-range" id="v-mileage" min="500" max="150000" step="500" value="40000" oninput="updateMileageLabel(); runValuation()">
+                        </div>
+                        <div class="c-input-group">
+                            <label>Condition</label>
+                            <select class="c-input" id="v-condition" style="appearance: auto;" onchange="runValuation()">
+                                <option value="1.0">Pristine / Showroom (Flawless)</option>
+                                <option value="0.9" selected>Excellent (Minor wear, perfect mechanics)</option>
+                                <option value="0.8">Good (Normal wear, needs minor TLC)</option>
+                                <option value="0.65">Fair (Needs mechanical/cosmetic work)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="val-result-box" id="v-result-box">
+                            <div class="val-label">Estimated Baseline Range</div>
+                            <div class="val-price" id="v-price-range"><span>$</span>---,---</div>
+                            <div class="val-disclaimer">Pending physical inspection & market analysis.</div>
+                        </div>
+
+                        <button class="submit-btn" style="margin-top: 1.5rem;" onclick="openQuoteModal('Vehicle Consignment')">Request Official Valuation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-panel" id="c-tab-buy">
+                <div class="c-grid">
+                    <div class="c-info">
+                        <h4>Your Dream Car. Hand-Delivered.</h4>
+                        <p>Looking for a specific trim, color, or rare package? Tell us what you want. We leverage dealer-only auctions and private networks to source, inspect, and transport it directly to you.</p>
+                        <ul class="c-features">
+                            <li><i class="fas fa-globe-americas"></i> Nationwide private and auction sourcing</li>
+                            <li><i class="fas fa-microscope"></i> Rigorous 150-point pre-purchase inspection by our techs</li>
+                            <li><i class="fas fa-key"></i> Delivered fully detailed and ready for the road</li>
+                        </ul>
+                    </div>
+
+                    <div class="c-form">
+                        <div class="c-input-group">
+                            <label>Target Make & Model</label>
+                            <input type="text" class="c-input" placeholder="e.g. BMW M3 Competition xDrive" id="b-model">
+                        </div>
+                        <div class="c-input-group">
+                            <label>Must-Have Features / Colors</label>
+                            <input type="text" class="c-input" placeholder="e.g. Isle of Man Green, Carbon Buckets" id="b-features">
+                        </div>
+                        <div class="c-input-group">
+                            <label>Budget Ceiling</label>
+                            <select class="c-input" style="appearance: auto;" id="b-budget">
+                                <option>Under $30,000</option>
+                                <option>$30,000 - $50,000</option>
+                                <option>$50,000 - $80,000</option>
+                                <option>$80,000 - $120,000</option>
+                                <option>$120,000+</option>
+                            </select>
+                        </div>
+                        
+                        <button class="submit-btn" style="margin-top: 1.5rem;" onclick="openQuoteModal('Bespoke Sourcing')">Engage Sourcing Concierge</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     <!-- OIL CHANGE TOOL -->
     <section id="oil-tool">
@@ -5429,7 +5873,7 @@
                         <div class="pkg-feats">
                             <div class="pkg-feat"><i class="fas fa-check-circle"></i>Full synthetic oil + premium filter
                             </div>
-                            <div class="pkg-feat"><i class="fas fa-check-circle"></i>Tyre rotation, balance &amp;
+                            <div class="pkg-feat"><i class="fas fa-check-circle"></i>Tire rotation, balance &amp;
                                 alignment check</div>
                             <div class="pkg-feat"><i class="fas fa-check-circle"></i>Cabin &amp; engine air filter
                                 replacement</div>
@@ -5523,7 +5967,7 @@
             <div class="service-card" onclick="scrollToSection('tyre-tool')">
                 <span class="service-badge badge-popular">Most Popular</span>
                 <div class="service-icon-wrap"><i class="fas fa-circle-notch service-icon"></i></div>
-                <div class="service-name">Tyre Sales &amp; Fitting</div>
+                <div class="service-name">Tire Sales &amp; Fitting</div>
                 <p class="service-desc">50+ brands stocked across premium and budget tiers. Every fitment includes
                     professional balancing and valve replacement.</p>
                 <div class="service-feats">
@@ -5719,7 +6163,7 @@
                 </div>
                 <div class="team-info">
                     <div class="team-name">Ray</div>
-                    <div class="team-role">Tyre Department Expert</div>
+                    <div class="team-role">Tire Department Expert</div>
                     <a href="tel:+18479662886" class="team-phone"><i class="fas fa-phone-alt"></i> (847) 966-2886</a>
                 </div>
             </div>
@@ -5857,8 +6301,8 @@
                         <label>Service Needed</label>
                         <select class="form-select" id="fservice">
                             <option value="">Select a Service</option>
-                            <option>Brand New Tyre Purchase &amp; Fitting</option>
-                            <option>Budget Tyre Purchase &amp; Fitting</option>
+                            <option>Brand New Tire Purchase &amp; Fitting</option>
+                            <option>Budget Tire Purchase &amp; Fitting</option>
                             <option>Oil Change — Conventional</option>
                             <option>Oil Change — Synthetic Blend</option>
                             <option>Oil Change — Full Synthetic</option>
@@ -6217,7 +6661,7 @@
             { text: 'Came in for an oil change and they caught a brake issue before it became dangerous. Saved my life, literally.', name: 'Maria T.', meta: 'Oil Change · Brake Inspection', init: 'MT' },
             { text: 'Incredible service. They fixed what two other shops couldn\'t. Fair, honest, and genuinely skilled team.', name: 'David K.', meta: 'Transmission Repair', init: 'DK' },
             { text: 'Always on time, always thorough. My whole family brings their cars here. Five stars every single time.', name: 'The Chen Family', meta: 'Multi-Vehicle Service', init: 'CF' },
-            { text: 'Ray in the tyre department is amazing. Knew exactly what I needed and got me sorted fast. Great value.', name: 'James P.', meta: 'Tyre Fitting', init: 'JP' },
+            { text: 'Ray in the tyre department is amazing. Knew exactly what I needed and got me sorted fast. Great value.', name: 'James P.', meta: 'Tire Fitting', init: 'JP' },
             { text: 'Honest diagnosis, no unnecessary upselling. Fixed my A/C in under 2 hours. Highly recommended!', name: 'Sofia M.', meta: 'A/C Repair', init: 'SM' },
             { text: 'Best mechanic shop in the northwest suburbs. Essam and his team always go above and beyond for customers.', name: 'Robert H.', meta: 'General Maintenance', init: 'RH' }
         ];
@@ -6741,13 +7185,13 @@
 
             if (srv.includes('tyre') || srv.includes('tire')) {
                 expertName = 'Ray';
-                expertTitle = 'Tyre Department Expert';
+                expertTitle = 'Tire Department Expert';
                 expertPhone = '+1 (847) 966-2886';
-                serviceScope = 'Premium Tyre Fitting, Balancing & Alignment';
+                serviceScope = 'Premium Tire Fitting, Balancing & Alignment';
                 detailedInclusions = [
                     'Professional demounting and eco-friendly disposal of old tyres',
                     'Precision road-force balancing for ultimate ride smoothness',
-                    'TPMS (Tyre Pressure Monitoring System) diagnostic and reset',
+                    'TPMS (Tire Pressure Monitoring System) diagnostic and reset',
                     'Installation of premium valve stems (where applicable)',
                     'Hand-torqued lug nuts to exact manufacturer specifications',
                     'Complimentary multi-point suspension geometry check'
@@ -6960,19 +7404,19 @@
 
         function buildQuoteNotes(svc) {
             let notes = '';
-            if (svc === 'Premium Tyre') {
+            if (svc === 'Premium Tire') {
                 const size = document.getElementById('premium-size').textContent;
                 const brand = document.getElementById('premium-brand-name').textContent;
                 const specs = document.getElementById('premium-specs').textContent;
-                notes = `Tyre Size: ${size}\nBrand: ${brand}\nSpecs: ${specs}`;
-            } else if (svc === 'Budget Tyre') {
+                notes = `Tire Size: ${size}\nBrand: ${brand}\nSpecs: ${specs}`;
+            } else if (svc === 'Budget Tire') {
                 const size = document.getElementById('budget-size').textContent;
                 const brand = document.getElementById('budget-brand-name').textContent;
-                notes = `Tyre Size: ${size}\nBrand: ${brand}`;
-            } else if (svc === 'Refurbished Tyre') {
+                notes = `Tire Size: ${size}\nBrand: ${brand}`;
+            } else if (svc === 'Refurbished Tire') {
                 const size = document.getElementById('refurb-size').textContent;
                 const grade = document.getElementById('refurb-specs').textContent;
-                notes = `Tyre Size: ${size}\nVisual Grade: ${grade}`;
+                notes = `Tire Size: ${size}\nVisual Grade: ${grade}`;
             } else if (svc === 'Oil Change') {
                 const vehicle = document.getElementById('vehicle-input').value.trim();
                 const mileage = document.getElementById('mileage-input').value.trim();
@@ -7069,13 +7513,13 @@
 
             if (srv.includes('tyre') || srv.includes('tire')) {
                 expertName = 'Ray';
-                expertTitle = 'Tyre Department Expert';
+                expertTitle = 'Tire Department Expert';
                 expertPhone = '+1 (847) 966-2886';
-                serviceScope = 'Premium Tyre Fitting, Balancing & Alignment';
+                serviceScope = 'Premium Tire Fitting, Balancing & Alignment';
                 detailedInclusions = [
                     '• Professional demounting and eco-friendly disposal of old tyres',
                     '• Precision road-force balancing for ultimate ride smoothness',
-                    '• TPMS (Tyre Pressure Monitoring System) diagnostic and reset',
+                    '• TPMS (Tire Pressure Monitoring System) diagnostic and reset',
                     '• Installation of premium valve stems (where applicable)',
                     '• Hand-torqued lug nuts to exact manufacturer specifications',
                     '• Complimentary multi-point suspension geometry check'
@@ -7256,6 +7700,86 @@
                 if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
             });
         });
+
+
+
+
+
+
+
+// ════════════════════════════════════════════
+        // CONCIERGE HUB LOGIC
+        // ════════════════════════════════════════════
+        
+        function switchConciergeTab(tabId, btn) {
+            // Manage Tab Active States
+            document.querySelectorAll('.c-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Manage Panel Visibility
+            document.querySelectorAll('.c-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('c-tab-' + tabId).classList.add('active');
+        }
+
+        function updateMileageLabel() {
+            const mileage = document.getElementById('v-mileage').value;
+            document.getElementById('v-mileage-val').textContent = Number(mileage).toLocaleString() + ' mi';
+        }
+
+        // Mock Valuation Logic for "Ultra Interaction"
+        function runValuation() {
+            const modelInput = document.getElementById('v-model').value.trim();
+            const resultBox = document.getElementById('v-result-box');
+            const priceDisplay = document.getElementById('v-price-range');
+            
+            if (modelInput.length < 3) {
+                resultBox.classList.remove('show');
+                return;
+            }
+
+            // Pseudo-random baseline generated from character length just to simulate an API response
+            let baseValue = (modelInput.length * 1200) + 15000; 
+            
+            // Adjust for mileage (depreciation)
+            const mileage = parseInt(document.getElementById('v-mileage').value);
+            const depreciation = (mileage / 10000) * 800; // lose $800 every 10k miles
+            baseValue -= depreciation;
+
+            // Adjust for condition
+            const conditionMultiplier = parseFloat(document.getElementById('v-condition').value);
+            baseValue = baseValue * conditionMultiplier;
+
+            // Ensure we don't drop below $1000
+            if (baseValue < 1000) baseValue = 1000;
+
+            const lowEnd = Math.round(baseValue * 0.95).toLocaleString();
+            const highEnd = Math.round(baseValue * 1.08).toLocaleString();
+
+            priceDisplay.innerHTML = `<span>$</span>${lowEnd} - <span>$</span>${highEnd}`;
+            resultBox.classList.add('show');
+        }
+
+
+
+
+
+// Add these to your existing if/else chain inside buildQuoteNotes():
+else if (svc === 'Vehicle Consignment') {
+    const model = document.getElementById('v-model').value;
+    const mileage = document.getElementById('v-mileage').value;
+    notes = `Vehicle: ${model}\nMileage: ${Number(mileage).toLocaleString()} mi\nCondition: Client selected multiplier via interactive form. Needs physical walk-around.`;
+} else if (svc === 'Bespoke Sourcing') {
+    const model = document.getElementById('b-model').value;
+    const feats = document.getElementById('b-features').value;
+    const budget = document.getElementById('b-budget').value;
+    notes = `Target Vehicle: ${model}\nMust-Haves: ${feats}\nBudget: ${budget}`;
+}
+
+
+        
+
+
+        
     </script>
 </body>
 
