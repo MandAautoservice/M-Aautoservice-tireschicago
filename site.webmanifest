@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "M & A Auto Service",
+  "short_name": "M&A Auto",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png?v=20260422",
@@ -9,13 +9,13 @@
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png?v=20260422",
+      "src": "/web-app-manifest-512x512.jpg?v=20260422",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#0A1628",
   "background_color": "#ffffff",
   "display": "standalone"
 }
